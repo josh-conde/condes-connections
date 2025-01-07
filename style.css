@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --color-primary:rgb(45, 185, 120);
+    --color-secondary: rgb(156, 237, 124);
+    --color-text: rgb(59, 84, 64);
+    --font-heading: "Raleway", Arial, sans-serif;
+    --font-body: "Lato", Arial, sans-serif; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { 
+    background-color: whitesmoke;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+a:active {
+    color: var(--color-text);
+}
+
+a:visited {
+    color: var(--color-text);
+}
+
+ul, li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    padding: 100px;
+    margin: 0 auto;
+}
+
+.left-nav img{
+    width: 100%;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2.5s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .right-nav a {
+    padding: 5px 35px;
+    background-color: var(--color-text);
+    border-radius: 12px;
+    align-self: center;
+  }
+  
+  .right-nav i {
+    padding: 12px 20px;
+  }
+
+  .right-nav a:hover {
+    padding: 5px 38px; 
+  }
