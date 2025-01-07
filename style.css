@@ -46,10 +46,14 @@ ul, li {
 .navbar {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 80% 20%;
     padding: 100px;
     margin: 0 auto;
+}
+.left-nav {
+    grid-column: 1 /span 4;
+    grid-row: 1;
 }
 
 .left-nav img{
@@ -69,6 +73,9 @@ ul, li {
     }
   }
 
+  .right-nav {
+    display: flex;
+  }
   .right-nav a {
     padding: 5px 35px;
     background-color: var(--color-text);
