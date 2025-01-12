@@ -142,6 +142,38 @@
 }
 
 
+.service-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    max-width: 80px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
