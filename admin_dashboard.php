@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: admin_login.php");
-    exit;
-}
+// if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+//     header("Location: admin_login.php");
+//     exit;
+// }
 
 $db = new PDO('sqlite:contacts.db');
 
@@ -26,10 +26,6 @@ $result = $db->query($query);
     <title>Admin Dashboard</title>
 </head>
 <body>
-    <div class="hero container">
-        <img class="fade-in" src="img/logo_transparent.png" alt="Conde's Connections Logo">
-    </div>
-
     <h1>Contact Form Submissions</h1>
 
     <div class="contact-table">

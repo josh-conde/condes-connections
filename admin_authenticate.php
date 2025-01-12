@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-$adminData = file_get_contents('/secure/path/admin.json');
+$adminData = file_get_contents('admin.json');
 $admins = json_decode($adminData, true);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
+    print_r($username);
+    print_r($password);
     foreach ($admins as $admin) {
         if ($admin['username'] === $username && password_verify($password, $admin['password'])) {
             $_SESSION['loggedin'] = true;
