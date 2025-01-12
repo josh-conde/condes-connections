@@ -1,59 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-:root {
-    --color-primary:rgb(45, 185, 120);
-    --color-secondary: rgb(156, 237, 124);
-    --color-text: rgb(59, 84, 64);
-    --font-heading: "Raleway", Arial, sans-serif;
-    --font-body: "Lato", Arial, sans-serif;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    background-color: whitesmoke;
-    line-height: 1.5;
-    scroll-behavior: smooth;
-    font-family: var(--font-body);
-}
-
-a {
-    text-decoration: none;
-    color: var(--color-primary);
-}
-
-a:hover {
-    color: var(--color-secondary);
-}
-
-a:active {
-    color: var(--color-primary);
-}
-
-a:visited {
-    color: var(--color-secondary);
-}
-
-ul, li {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-h2 {
-    font-family: var(--font-heading);
-    color: var(--color-primary);
-
-}
-
-.container {
-    width: 60%;
-    margin: 0 auto;
-}
 
 .navbar {
     width: 100%;
@@ -146,18 +90,6 @@ h2 {
     visibility: hidden;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(70px);
-    animation: fadeIn 2.2s ease-out forwards;
-}
-
-.spacer {
-    width: 100%;
-    background-color: lightcyan;
-    height: 70px;
-}
-
 .projects p {
     text-align: center;
 }
@@ -193,40 +125,22 @@ h2 {
 }
 
 .project1 {
-    background-image: url(img/blue-purpose-logo.png);
+    background-image: url(/img/blue-purpose-logo.png);
 
 }
 
 .project2 {
-    background-image: url(img/logo1.png);
+    background-image: url(/img/logo1.png);
 }
 
 .project3 {
-    background-image: url(img/customcolor_logo_transparent_background.png);
+    background-image: url(/img/customcolor_logo_transparent_background.png);
 }
 
 .project4 {
-    background-image: url(img/condes-connections-high-resolution-logo-transparent.png);
+    background-image: url(/img/condes-connections-high-resolution-logo-transparent.png);
 }
 
-.hidden {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.visible {
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-.hidden:hover{
-    cursor: pointer;
-}
-
-.fade-background {
-    background-color: rgba(255, 255, 255, 0.823);
-    background-blend-mode: overlay;
-}
 
 @keyframes fadeIn {
     to {
