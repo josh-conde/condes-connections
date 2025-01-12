@@ -49,12 +49,20 @@ ul, li {
     justify-content: space-between;
 }
 
+h1 {
+    color: var(--color-primary);
+}
+
 h2 {
     font-family: var(--font-heading);
     color: var(--color-primary);
     font-weight: 700;
     text-decoration: underline var(--color-secondary);
 
+}
+
+h3 {
+    color: var(--color-secondary);
 }
 
 .container {
@@ -194,6 +202,47 @@ footer {
 
 footer a {
     margin-right: 10px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-primary);
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+}
+
+.faq-label {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 10px;
+    background-color: whitesmoke;
+}
+
+/* .faq-content img {
+    margin: 0 auto;
+    padding: 2px;
+    width: 60%;
+    height: 90%;
+} */
+
+.faq-item input[type="checkbox"]:checked ~ .faq-content {
+    max-height: 100%;
+    padding: 10px;
+}
+
+.faq-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
