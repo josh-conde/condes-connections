@@ -1,3 +1,55 @@
+h1 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .contact-table {
+    max-width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    background-color: white;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--color-primary);
     color: white;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-secondary);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:hover {
+    background-color: rgba(45, 185, 120, 0.2);
+}
+
+td[colspan="8"] {
+    text-align: center;
+    font-style: italic;
+    color: #888;
 }

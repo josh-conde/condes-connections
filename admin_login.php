@@ -10,14 +10,26 @@
     <title>Admin Login</title>
 </head>
 <body>
-    <form method="POST" action="admin_authenticate.php">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+    <nav class="navbar" id="home">
+        <div class="nav" >
+            <a href="index.html#home"><img src="img/logo_transparent_header.png" alt="Logo Header"></a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+    <div class="hero container">
+        <form method="POST" action="admin_authenticate.php">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-        <button type="submit">Login</button>
-    </form>
+            <button type="submit">Login</button>
+        </form>
+        <img class="fade-in" src="img/logo_transparent.png" alt="Conde's Connections Logo">
+    </div>
+
 </body>
 </html>

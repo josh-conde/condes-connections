@@ -10,9 +10,10 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+
     <nav class="navbar" id="home">
         <div class="nav" >
-            <a href="#home">Home</a>
+            <a href="index.html"><img src="img/logo_transparent_header.png" alt="Logo Header"></a>
             <a href="#services">Services</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
@@ -28,7 +29,7 @@
         <button class="hero-message button slide-in" id="openModal">Let's Connect!</button>
 
         <!-- Modal Structure -->
-        <div id="contactModal" class="modal">
+        <div id="contactModal" class="modal contact">
         <div class="modal-content">
             <span class="close-button" id="closeModal">&times;</span>
             <h2>Contact Us</h2>
@@ -50,8 +51,8 @@
 
             <label for="business_type">Business Type:</label>
             <select id="business_type" name="business_type" required>
-              <option value="small business">Small Business</option>
-              <option value="portfolio">Portfolio</option>
+              <option value="Small Business">Small Business</option>
+              <option value="Portfolio">Portfolio</option>
               <option value="other">Other</option>
             </select>
 
@@ -66,7 +67,8 @@
     <main>
         <div class="services container">
             <h2>Services</h2>
-            <p>In a world dominated by AI and automated web page builders, we understand the convenience they offer. However, your website is more than just a page—it's your online storefront or gallery, a true representation of your brand. Would you trust a machine to build your physical store or design your gallery?</p> <br> <span class="center-text">Why settle for less online?</span>
+            <br><p>In a world dominated by AI and automated web page builders, we understand the convenience they offer. However, your website is more than just a page—it's your online storefront or gallery, a true representation of your brand. Would you trust a machine to build your physical store or design your gallery?</p> <br> <span class="center-text">Why settle for less online?</span>
+            <br><img src="img/chris-ried-ieic5Tq8YMk-unsplash.jpg" alt="Coding langugage on a computer screen">
             <!-- Carousel Container -->
             <div class="carousel">
                 <div class="carousel-track">
@@ -108,7 +110,7 @@
 
                     <!-- Service Card 5 -->
                     <div class="service-card">
-                        <i class="fa-solid fa-shop"></i>
+                        <i class="fa-solid fa-shop fa-2xl"></i>
                         <h3>Branding & UI/UX Design</h3>
                         <p>Build a cohesive and appealing visual identity for your business or portfolio.</p>
                         <br>
@@ -118,11 +120,11 @@
             </div>
         </div>
 
-        <div class="spacer" id="projects"></div>
+        <!-- <div class="spacer" id="projects"></div>
 
         <div class="projects container">
             <h2>Projects</h2>
-            <p>Take a look at some finished projects and ongoing work I’m excited to share!</p>
+            <br><p>Take a look at some finished projects and ongoing work I’m excited to share!</p>
             <div class="individual-projects">
                 <div class="project1 card"><p class="hidden">Developed a secure and user-friendly registration platform using PHP and MySQL, focused on enhancing client accessibility and ease of use. <br><a href="https://github.com/josh-conde/blue-purpose" target="_blank">Link to Repo</a></p></div>
                 <div class="project2 card"><p class="hidden">Designed a mock sports news site with a clean, responsive layout to display articles in a user-friendly, grid-based format, showcasing HTML, CSS, and JavaScript skills.<br><a href="https://github.com/josh-conde/newsgrid" target="_blank">Link to Repo</a></p></div>
@@ -130,18 +132,23 @@
                 <div class="project4 card"><p class="hidden">Developed a personal website offering web development services, emphasizing clarity and simplicity with multiple service packages for clients.<br><a href="https://www.condesconnections.com" target="_blank">Link to Site</a></p></div>
             </div>
             <p><a href="https://github.com/josh-conde" target="_blank">See More</a></p>
-        </div>
+        </div> -->
         <div class="spacer" id="about"></div>
 
         <div class="about container">
             <h2>About Us</h2>
+            <br><p>Welcome to Conde’s Connections, where passion meets precision in web design and development. Founded by Josh Conde, a dedicated web developer with a keen eye for detail and creativity, our mission is to craft websites that are more than just functional—they’re a reflection of your brand’s unique story.</p>
+            <br><p>With a background in web development and a love for innovation, Josh understands the power of a well-designed website. It’s not just a digital presence; it’s your online storefront, portfolio, and first impression. At Conde’s Connections, we believe in creating tailored solutions that captivate, engage, and drive results.</p>
+            <br><p>Josh’s commitment to excellence doesn’t stop at design. From dynamic functionality to seamless user experiences, every element is crafted with care. Whether you're a small business looking to expand your reach, a creative professional showcasing your talent, or someone who simply wants a professional online presence, we’re here to bring your vision to life.</p>
+            <br><p>Outside of coding, Josh enjoys exploring the beauty of astronomy and bringing his creative passions to life, ensuring that every project benefits from a blend of technical expertise and artistic inspiration.</p>
+            <br><p id="cta-statement">Let’s connect and turn your ideas into something extraordinary!</p>
         </div>
 
         <div class="spacer" id="contact"></div>
 
         <div class="contact container">
             <h2>Contact</h2>
-            <form method="POST" action="submit_form.php">
+            <br><form method="POST" action="submit_form.php">
                 <label for="first_name">First Name:</label>
                 <input type="text" id="first_name" name="first_name" required>
 
@@ -172,4 +179,7 @@
 
     </main>
 </body>
+<footer>
+    <a href="admin_login.php"><i class="fa-solid fa-user-tie fa-xl"></i> Admin</a>
+</footer>
 </html>

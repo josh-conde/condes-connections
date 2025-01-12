@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-    --color-primary:rgb(45, 185, 120);
-    --color-secondary: rgb(156, 237, 124);
-    --color-text: rgb(59, 84, 64);
+    --color-primary:rgb(227, 104, 54);
+    --color-secondary: rgb(44, 180, 193);
+    --color-text: rgb(69, 74, 88);
     --font-heading: "Raleway", Arial, sans-serif;
     --font-body: "Lato", Arial, sans-serif;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -38,6 +38,11 @@ a:visited {
     color: var(--color-secondary);
 }
 
+p {
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
 ul, li {
     list-style: none;
     display: flex;
@@ -53,7 +58,7 @@ h2 {
 }
 
 .container {
-    width: 75%;
+    width: 55%;
     margin: 0 auto;
     background-color: white;
     padding: 20px;
@@ -61,6 +66,30 @@ h2 {
     box-shadow: var(--shadow)
 }
 
+.navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 0 auto;
+    background-color: var(--color-text);
+    border-bottom: 1px solid var(--color-primary);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.nav a {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
 .fade-in {
     opacity: 0;
     transform: translateY(70px);
@@ -151,4 +180,30 @@ h2 {
 .services.center-text {
     text-align: center;
     font-size: 1.3rem;
+}
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-text);
+    border-top: 1px solid var(--color-primary);
+    padding-bottom: 20px;
+    padding-top: 10px;
+    text-align: right;
+}
+
+footer a {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 960px) {
+    .container {
+        width: 90%;
+    }
 }

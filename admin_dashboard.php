@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-// if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-//     header("Location: admin_login.php");
-//     exit;
-// }
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: admin_login.php");
+    exit;
+}
 
 $db = new PDO('sqlite:contacts.db');
 
@@ -26,6 +26,15 @@ $result = $db->query($query);
     <title>Admin Dashboard</title>
 </head>
 <body>
+    <nav class="navbar" id="home">
+        <div class="nav" >
+            <a href="index.html#home"><img src="img/logo_transparent_header.png" alt="Logo Header"></a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
     <h1>Contact Form Submissions</h1>
 
     <div class="contact-table">
@@ -65,6 +74,7 @@ $result = $db->query($query);
         </table>
     </div>
 </body>
+<div class="spacer"></div>
 <footer>
     <a href="logout.php">Logout</a>
 </footer>
