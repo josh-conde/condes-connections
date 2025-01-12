@@ -4,7 +4,8 @@
     --color-secondary: rgb(156, 237, 124);
     --color-text: rgb(59, 84, 64);
     --font-heading: "Raleway", Arial, sans-serif;
-    --font-body: "Lato", Arial, sans-serif; 
+    --font-body: "Lato", Arial, sans-serif;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -13,7 +14,7 @@
     padding: 0;
 }
 
-html { 
+html {
     background-color: whitesmoke;
     line-height: 1.5;
     scroll-behavior: smooth;
@@ -30,11 +31,11 @@ a:hover {
 }
 
 a:active {
-    color: var(--color-text);
+    color: var(--color-primary);
 }
 
 a:visited {
-    color: var(--color-text);
+    color: var(--color-secondary);
 }
 
 ul, li {
@@ -43,50 +44,204 @@ ul, li {
     justify-content: space-between;
 }
 
+h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
 .navbar {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 80% 20%;
-    padding: 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     margin: 0 auto;
-}
-.left-nav {
-    grid-column: 1 /span 4;
-    grid-row: 1;
+    background-color: var(--color-text);
+    border-bottom: 1px solid var(--color-primary);
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
-.left-nav img{
+.nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.nav a {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero img{
     width: 100%;
+}
+
+.hero-message {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 12px;
+    margin: 10px;
+    box-shadow: var(--shadow);
+}
+
+.hero-message.title {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: var(--color-text);
+    animation: slideIn 1.8s ease-out forwards;
+    animation-delay: 1.5s;
+    width: 100%;
+}
+
+.hero-message.text {
+    color: var(--color-text);
+    font-style: italic;
+    font-size: 1.1rem;
+    background-color: var(--color-primary);
+    animation: slideIn 2.0s ease-out forwards;
+    animation-delay: 2.5s;
+    width: 90%;
+}
+
+.hero-message.button {
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    background-color: white;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+    border-color: var(--color-primary);
+    animation: slideIn 2.2s ease-out forwards;
+    animation-delay: 3.5s;
+}
+
+.hero-message.button:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.hero-message.title, .hero-message.text, .hero-message.button, span {
+    display: inline-block;
+    transform: translateY(100%);
+    visibility: hidden;
 }
 
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 2.5s ease-out forwards;
-  }
-  
-  @keyframes fadeIn {
+    transform: translateY(70px);
+    animation: fadeIn 2.2s ease-out forwards;
+}
+
+.spacer {
+    width: 100%;
+    background-color: lightcyan;
+    height: 70px;
+}
+
+.projects p {
+    text-align: center;
+}
+
+.individual-projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.card {
+    width: 100%;
+    border: 3px solid var(--color-secondary);
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    box-shadow: var(--shadow);
+}
+
+.card:hover{
+    opacity: .9;
+    border: 3px solid var(--color-primary);
+    transition: border .6s ease-in;
+}
+
+.projects a {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.project1 {
+    background-image: url(img/blue-purpose-logo.png);
+
+}
+
+.project2 {
+    background-image: url(img/logo1.png);
+}
+
+.project3 {
+    background-image: url(img/customcolor_logo_transparent_background.png);
+}
+
+.project4 {
+    background-image: url(img/condes-connections-high-resolution-logo-transparent.png);
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.hidden:hover{
+    cursor: pointer;
+}
+
+.fade-background {
+    background-color: rgba(255, 255, 255, 0.823);
+    background-blend-mode: overlay;
+}
+
+@keyframes fadeIn {
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
 
-  .right-nav {
-    display: flex;
-  }
-  .right-nav a {
-    padding: 5px 35px;
-    background-color: var(--color-text);
-    border-radius: 12px;
-    align-self: center;
-  }
-  
-  .right-nav i {
-    padding: 12px 20px;
-  }
-
-  .right-nav a:hover {
-    padding: 5px 38px; 
-  }
+@keyframes slideIn {
+    from {
+        visibility: visible;
+        transform: translateY(100%);
+    }
+    to {
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
