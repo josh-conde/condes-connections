@@ -10,14 +10,14 @@
     <title>Admin Login</title>
 </head>
 <body>
-    <form method="POST" action="./admin_authenticate.php">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+    <form method="POST" action="admin_authenticate.php">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-    <button type="submit">Login</button>
+        <button type="submit">Login</button>
     </form>
 </body>
 </html>
