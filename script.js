@@ -16,17 +16,9 @@ projectCards.forEach(card => {
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementsByClassName("navbar");
 
-    navbar.classList.add("fade-in");
-  });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector(".carousel-track");
-    const prevButton = document.querySelector(".carousel-btn.prev");
-    const nextButton = document.querySelector(".carousel-btn.next");
-
-    const cards = Array.from(track.children);
-    const cardWidth = cards[0].getBoundingClientRect().width;
-
+    const track      = document.querySelector(".carousel-track");
+    const cards      = Array.from(track.children);
+    const cardWidth  = cards[0].getBoundingClientRect().width;
     let currentIndex = 0;
 
     const updateCarousel = () => {
@@ -34,20 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
         track.style.transform = `translateX(${translateX}px)`;
     };
 
-    nextButton.addEventListener("click", () => {
-        if (currentIndex < cards.length - 1) {
-            currentIndex++;
-            updateCarousel();
-        }
-    });
+    const autoScroll = () => {
+        currentIndex = (currentIndex + 1) % cards.length;
+        updateCarousel();
+    };
 
-    prevButton.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    });
-});
+    setInterval(autoScroll, 4500);
+
+    navbar.classList.add("fade-in");
+  });
+
+
 openModal.addEventListener('click', () => {
     modal.style.display = 'flex';
 });

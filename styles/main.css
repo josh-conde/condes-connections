@@ -125,46 +125,49 @@
 }
 
 .project1 {
-    background-image: url(/img/blue-purpose-logo.png);
+    background-image: url(../img/blue-purpose-logo.png);
 
 }
 
 .project2 {
-    background-image: url(/img/logo1.png);
+    background-image: url(../img/logo1.png);
 }
 
 .project3 {
-    background-image: url(/img/customcolor_logo_transparent_background.png);
+    background-image: url(../img/customcolor_logo_transparent_background.png);
 }
 
 .project4 {
-    background-image: url(/img/condes-connections-high-resolution-logo-transparent.png);
+    background-image: url(../img/condes-connections-high-resolution-logo-transparent.png);
 }
 
 
 .service-card {
     min-width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.service-card img {
-    max-width: 80px;
-    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--color-secondary);
+    margin-right: 2px;
 }
 
 .service-card h3 {
     margin: 10px 0;
     font-size: 1.2rem;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+
 }
 
 .service-card p {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--color-text);
+}
+
+.service-card i {
+    color: var(--color-text);
 }
 
 .contact form {
